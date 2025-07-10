@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://v7j6luup8b6"]
+
+[ext_resource type="PackedScene" uid="uid://bjlrhernmy5kw" path="res://scenes/coin.tscn" id="1_oo0fn"]
+[ext_resource type="FontFile" uid="uid://e0f72nqbsnav" path="res://assets/tutorialAssets/fonts/PixelOperator8.ttf" id="2_5ysmq"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinCounter" type="Node" parent="CanvasLayer"]
+
+[node name="CoinIcon" parent="CanvasLayer/CoinCounter" instance=ExtResource("1_oo0fn")]
+position = Vector2(56, 55)
+scale = Vector2(8, 8)
+collision_layer = 0
+collision_mask = 0
+script = null
+
+[node name="CoinLabel" type="Label" parent="CanvasLayer/CoinCounter"]
+z_index = 1
+offset_left = 121.0
+offset_top = 28.0
+offset_right = 809.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_5ysmq")
+theme_override_font_sizes/font_size = 64
+text = "X 0"
