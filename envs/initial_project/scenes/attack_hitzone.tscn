@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bts56tt03cse"]
 
-[ext_resource type="Script" uid="uid://c2ymikd2f4shp" path="res://scripts/attack_hitzone.gd" id="1_m60bo"]
+[ext_resource type="Script" uid="uid://c2ymikd2f4shp" path="res://envs/initial_project/scripts/attack_hitzone.gd" id="1_m60bo"]
 
 [node name="Attack Hitzone" type="Area2D"]
 collision_layer = 0

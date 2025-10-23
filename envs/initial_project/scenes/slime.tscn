@@ -1,14 +1,14 @@
 [gd_scene load_steps=30 format=3 uid="uid://deh3h5b31iedu"]
 
-[ext_resource type="Script" uid="uid://bvp0sf6o7w275" path="res://scripts/States/slimetestmachine.gd" id="1_2npkn"]
+[ext_resource type="Script" uid="uid://bvp0sf6o7w275" path="res://envs/initial_project/scripts/States/slimetestmachine.gd" id="1_2npkn"]
 [ext_resource type="Texture2D" uid="uid://cr6dsx4r3jrkm" path="res://assets/tutorialAssets/sprites/slime_green.png" id="1_p2gj0"]
-[ext_resource type="PackedScene" uid="uid://bkmwhggjivqlk" path="res://scenes/killzone.tscn" id="2_n6pvg"]
+[ext_resource type="PackedScene" uid="uid://bkmwhggjivqlk" path="res://envs/initial_project/scenes/killzone.tscn" id="2_n6pvg"]
 [ext_resource type="Texture2D" uid="uid://qqionti283ma" path="res://assets/atention.png" id="3_gstla"]
-[ext_resource type="Script" uid="uid://cyb4thdobxrp7" path="res://scripts/States/state_machine.gd" id="4_fd6lc"]
-[ext_resource type="Script" uid="uid://cjegxf1oxi3ve" path="res://scripts/States/idle.gd" id="5_gstla"]
-[ext_resource type="Script" uid="uid://drdivydsin3rp" path="res://scripts/States/wander.gd" id="6_fd6lc"]
-[ext_resource type="Script" uid="uid://daoxb185qdnrx" path="res://scripts/States/charge.gd" id="8_v5wyi"]
-[ext_resource type="Script" uid="uid://tewotq1b1147" path="res://scripts/States/hurt.gd" id="9_0l8pv"]
+[ext_resource type="Script" uid="uid://cyb4thdobxrp7" path="res://envs/initial_project/scripts/States/state_machine.gd" id="4_fd6lc"]
+[ext_resource type="Script" uid="uid://cjegxf1oxi3ve" path="res://envs/initial_project/scripts/States/idle.gd" id="5_gstla"]
+[ext_resource type="Script" uid="uid://drdivydsin3rp" path="res://envs/initial_project/scripts/States/wander.gd" id="6_fd6lc"]
+[ext_resource type="Script" uid="uid://daoxb185qdnrx" path="res://envs/initial_project/scripts/States/charge.gd" id="8_v5wyi"]
+[ext_resource type="Script" uid="uid://tewotq1b1147" path="res://envs/initial_project/scripts/States/hurt.gd" id="9_0l8pv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2qvl"]
 atlas = ExtResource("1_p2gj0")

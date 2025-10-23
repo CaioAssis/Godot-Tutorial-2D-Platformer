@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=4 uid="uid://cnh7o0exl16i8"]
 
-[ext_resource type="Script" uid="uid://dnejhj34ko1qf" path="res://scripts/game_manager.gd" id="1_gee14"]
-[ext_resource type="PackedScene" uid="uid://driyh5e0gfqdf" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://bjlrhernmy5kw" path="res://scenes/coin.tscn" id="2_lbhrr"]
+[ext_resource type="Script" uid="uid://dnejhj34ko1qf" path="res://envs/initial_project/scripts/game_manager.gd" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://driyh5e0gfqdf" path="res://envs/initial_project/scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://bjlrhernmy5kw" path="res://envs/initial_project/scenes/coin.tscn" id="2_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://dq40ay0sexbx2" path="res://assets/tutorialAssets/sprites/world_tileset.png" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://b5ck3ysqmoiil" path="res://scenes/platform.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://bkmwhggjivqlk" path="res://scenes/killzone.tscn" id="5_iywne"]
-[ext_resource type="PackedScene" uid="uid://deh3h5b31iedu" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://b5ck3ysqmoiil" path="res://envs/initial_project/scenes/platform.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bkmwhggjivqlk" path="res://envs/initial_project/scenes/killzone.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://deh3h5b31iedu" path="res://envs/initial_project/scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://e0f72nqbsnav" path="res://assets/tutorialAssets/fonts/PixelOperator8.ttf" id="6_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://v7j6luup8b6" path="res://scenes/hud.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://v7j6luup8b6" path="res://envs/initial_project/scenes/hud.tscn" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")

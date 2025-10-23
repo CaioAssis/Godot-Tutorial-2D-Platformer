@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://v7j6luup8b6"]
 
-[ext_resource type="PackedScene" uid="uid://bjlrhernmy5kw" path="res://scenes/coin.tscn" id="1_oo0fn"]
+[ext_resource type="PackedScene" uid="uid://bjlrhernmy5kw" path="res://envs/initial_project/scenes/coin.tscn" id="1_oo0fn"]
 [ext_resource type="FontFile" uid="uid://e0f72nqbsnav" path="res://assets/tutorialAssets/fonts/PixelOperator8.ttf" id="2_5ysmq"]
 
 [node name="HUD" type="Control"]
@@ -16,6 +16,7 @@ grow_vertical = 2
 [node name="CoinCounter" type="Node" parent="CanvasLayer"]
 
 [node name="CoinIcon" parent="CanvasLayer/CoinCounter" instance=ExtResource("1_oo0fn")]
+visible = false
 position = Vector2(56, 55)
 scale = Vector2(8, 8)
 collision_layer = 0
@@ -23,6 +24,7 @@ collision_mask = 0
 script = null
 
 [node name="CoinLabel" type="Label" parent="CanvasLayer/CoinCounter"]
+visible = false
 z_index = 1
 offset_left = 121.0
 offset_top = 28.0

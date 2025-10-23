@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://driyh5e0gfqdf"]
 
 [ext_resource type="Texture2D" uid="uid://cja75aja8ijij" path="res://assets/tutorialAssets/sprites/knight.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://btfi2s347euht" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://btfi2s347euht" path="res://envs/initial_project/scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://dtuq7fhqha5po" path="res://assets/tutorialAssets/sounds/jump.wav" id="3_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://daoxrd3wxt2ne" path="res://assets/tutorialAssets/sounds/hurt.wav" id="5_qlg0r"]
 

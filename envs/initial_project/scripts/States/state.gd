@@ -3,6 +3,8 @@ class_name  State
 
 signal Transitioned
 
+var parent: PlatformPlayer = null
+
 ##Descreve o que acontece na entrada do estado.
 ##Exemplo: Randomizar um timer para ação é feita aqui
 func Enter():

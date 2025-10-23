@@ -1,13 +1,15 @@
 extends Node
+class_name  FSM
 
 @export var initial_state: State 
 
 var current_state: State
 var states : Dictionary = {}
 
-func _ready():
+func init(parent: CharacterBody2D):
 	for child in get_children():
 		if child is State:
+			child.parent = parent
 			states[child.name.to_lower()] = child
 			child.Transitioned.connect(on_child_transition)
 	if initial_state:
