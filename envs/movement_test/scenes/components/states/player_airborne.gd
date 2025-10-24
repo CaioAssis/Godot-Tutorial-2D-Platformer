@@ -5,6 +5,7 @@ class_name PlayerAirborne
 @export_group("States", "state_")
 @export var state_ground: State = null
 @export var state_wall_slide: State = null
+@export var state_ledge_grab: State = null
 
 @export var jump_buffer: float = 0.1
 @export var coyote_time: float = 0.1
@@ -32,7 +33,11 @@ func Update(_delta: float):
 			func(): if parent.jump_counter == 0: parent.jump_counter +=1
 			)
 	
-	if (parent.is_on_wall() and parent.velocity.y >= 0 and
+	elif not Input.is_action_pressed('crouch') and parent.check_ledge():
+		if state_ledge_grab:
+			Transitioned.emit(self, state_ledge_grab)
+	
+	elif (parent.is_on_wall() and parent.velocity.y >= 0 and
 		(Input.is_action_pressed("move_left") or 
 		Input.is_action_pressed("move_right"))
 	):

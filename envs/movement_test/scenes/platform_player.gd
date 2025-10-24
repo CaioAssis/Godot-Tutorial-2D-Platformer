@@ -9,12 +9,17 @@ var run_speed_increase: float = 0.2
 
 var wall_pushback: float = 200
 
+var ledge_cd: float = 0.2
+var can_ledge_grab: bool = true
 
 var damage: int = 1
 
 @onready var sfx_player: AudioStreamPlayer2D = $PlayerSfx
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var fsm: FSMDescentralizado = $FSM
+@onready var grab_hand_cast: RayCast2D = $AnimatedSprite2D/WallGrabRaycast/GrabHandCast
+@onready var grab_check_cast: RayCast2D = $AnimatedSprite2D/WallGrabRaycast/GrabCheckCast
+@onready var grab_space_cast: RayCast2D = $AnimatedSprite2D/WallGrabRaycast/GrabSpaceCast
 
 var side: String = "right"
 var is_running: bool = false
@@ -79,3 +84,39 @@ func _watch_running(delta: float):
 		not Input.is_action_pressed("move_right")
 	):
 		is_running = false
+
+func set_ledge_cd():
+	can_ledge_grab = false
+	get_tree().create_timer(ledge_cd).timeout.connect(func(): can_ledge_grab = true)
+
+func check_ledge() -> bool:
+	if not can_ledge_grab: return false
+	
+	if velocity.y >= 0: 
+		grab_check_cast.enabled = true
+	else: 
+		grab_check_cast.enabled = false
+	grab_check_cast.force_raycast_update()
+	
+	if grab_check_cast.enabled and grab_check_cast.is_colliding():
+		var y_pos: float = grab_check_cast.get_collider().global_position.y
+		grab_hand_cast.position.y = y_pos + 1
+		grab_space_cast.position.y = y_pos - 3
+		
+		if not grab_hand_cast.enabled:
+			grab_hand_cast.enabled = true
+			grab_hand_cast.force_raycast_update()
+		if not grab_space_cast.enabled:
+			grab_space_cast.enabled = true
+			grab_space_cast.force_raycast_update()
+		
+		if grab_hand_cast.is_colliding() and not grab_space_cast.is_colliding():
+			return true
+	
+	else:
+		if grab_hand_cast.enabled:
+			grab_hand_cast.enabled = false
+		if grab_space_cast.enabled:
+			grab_space_cast.enabled = false
+	
+	return false

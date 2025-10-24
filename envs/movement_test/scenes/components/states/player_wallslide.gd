@@ -5,8 +5,9 @@ class_name PlayerWallslide
 @export_group("States", "state_")
 @export var state_ground: State = null
 @export var state_air: State = null
+@export var state_ledge_grab: State = null
 
-@export var wall_friction: float = 0.4
+@export var wall_friction: float = 0.3
 @export var jump_buffer: float = 0.1
 
 var anim: String = "wall_slide_"
@@ -25,6 +26,10 @@ func Update(_delta: float):
 	):
 		if state_air:
 			Transitioned.emit(self, state_air)
+	
+	elif not Input.is_action_pressed('crouch') and parent.check_ledge():
+		if state_ledge_grab:
+			Transitioned.emit(self, state_ledge_grab)
 
 func Physics_Update(delta: float):
 	_handle_movement(delta)
@@ -32,8 +37,10 @@ func Physics_Update(delta: float):
 
 func _handle_movement(delta: float):
 	if not parent.is_on_floor():
-		#parent.velocity += parent.get_gravity() * delta * wall_friction
-		parent.accelerate_y(parent.SPEED * wall_friction, 1, parent.ACCEL * 5/4 * delta)
+		var wf: float = wall_friction
+		if Input.is_action_pressed('crouch'): wf = 0.8
+		parent.accelerate_y(parent.SPEED * wf, 1, parent.ACCEL * 5/4 * delta)
+	
 	direction = Input.get_axis("move_left", "move_right")
 	parent.accelerate_x(parent.SPEED, direction, (parent.ACCEL * 3/4 * delta))
 	if Input.is_action_just_pressed("jump"):
