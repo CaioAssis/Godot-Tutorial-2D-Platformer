@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c12uhftr3kro6"]
+
+[ext_resource type="Shader" uid="uid://rd5xswkbnvc4" path="res://envs/shader_test/radial_appear/radial_appear.gdshader" id="1_umeoy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bvgg3"]
+shader = ExtResource("1_umeoy")
+shader_parameter/fade = 1.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_na3dk"]
+load_path = "res://.godot/imported/486211372623986688.png-55166d1124575d32526630a49ef5c6b6.ctex"
+
+[node name="RadialAppear" type="Sprite2D"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_bvgg3")
+texture = SubResource("CompressedTexture2D_na3dk")

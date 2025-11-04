@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5gabuk53jhru"]
+
+[ext_resource type="Material" uid="uid://dof7ipy42yax4" path="res://envs/shader_test/sprite_explosion/sprite_explosion.tres" id="2_qelt7"]
+
+[node name="SpriteExplosion" type="GPUParticles2D"]
+material = ExtResource("2_qelt7")
+amount = 2000
+lifetime = 1.5
+explosiveness = 1.0
+draw_order = 0
+process_material = ExtResource("2_qelt7")

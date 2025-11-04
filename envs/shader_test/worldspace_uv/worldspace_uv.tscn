@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhwrrn1sep74k"]
+
+[ext_resource type="Shader" uid="uid://bfqbhc5tgptv0" path="res://envs/shader_test/worldspace_uv/worldspace_uv.gdshader" id="1_sp3b4"]
+[ext_resource type="Texture2D" uid="uid://bppoqsidwsn5a" path="res://envs/shader_test/486211372623986688.png" id="2_exk28"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g3qk5"]
+shader = ExtResource("1_sp3b4")
+shader_parameter/tile_size = 112.0
+shader_parameter/uv_scale = 1.0
+
+[node name="WorldspaceUV" type="Sprite2D"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_g3qk5")
+texture = ExtResource("2_exk28")

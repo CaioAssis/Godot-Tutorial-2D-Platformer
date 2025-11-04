@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtnu14223mqyv"]
+
+[ext_resource type="Shader" uid="uid://313pc33ju00m" path="res://envs/shader_test/radial_fade/radial_fade.gdshader" id="1_d80kf"]
+[ext_resource type="Texture2D" uid="uid://bppoqsidwsn5a" path="res://envs/shader_test/486211372623986688.png" id="2_cioog"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u4lki"]
+shader = ExtResource("1_d80kf")
+shader_parameter/fade = 0.45000000670554
+
+[node name="RadialFade" type="Sprite2D"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u4lki")
+texture = ExtResource("2_cioog")
