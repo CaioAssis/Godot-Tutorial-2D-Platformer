@@ -32,7 +32,7 @@ func on_child_transition(state, new_state_name):
 	if !new_state:
 		return
 	
-	if !current_state:
+	if current_state:
 		current_state.Exit()
 	
 	new_state.Enter()
