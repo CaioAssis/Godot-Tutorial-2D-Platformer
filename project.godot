@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2DTutorial1"
-run/main_scene="uid://d01qg7rhuckbb"
+run/main_scene="uid://drxvjg85ygf8a"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -58,6 +58,8 @@ crouch={
 
 [layer_names]
 
+2d_render/layer_1="Environment"
+2d_render/layer_2="Sun"
 2d_physics/layer_1="Env"
 2d_physics/layer_2="Bodies"
 2d_physics/layer_3="Hurtbox"
